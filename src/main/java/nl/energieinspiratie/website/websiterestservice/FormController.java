@@ -20,6 +20,6 @@ public class FormController {
                 contactData.getSubject(),
                 contactData.getMessage(),
                 contactData.getConsent());
-        return ResponseEntity.status(HttpStatus.OK).location(URI.create("https://energieinspiratie.nl/success")).build();
+        return ResponseEntity.status(HttpStatus.TEMPORARY_REDIRECT).location(URI.create("https://energieinspiratie.nl/success")).build();
     }
 }
