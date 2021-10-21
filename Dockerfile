@@ -15,7 +15,7 @@ RUN mvn -B clean package
 
 FROM ${RUNTIME_IMAGE}
 
-COPY --from=build target/webflux-demo-*.jar /opt/app/webflux-demo.jar
+COPY --from=build target/website-rest-service-*.jar /opt/app/website-rest-service.jar
 
 WORKDIR /opt/app/
-CMD ["java", "-jar", "webflux-demo.jar"]
+CMD ["java", "-jar", "website-rest-service.jar"]
